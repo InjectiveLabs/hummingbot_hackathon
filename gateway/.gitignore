@@ -7,6 +7,7 @@ package-lock.json
 /certs
 /coverage
 /node_modules
+/coverage
 **/.DS_Store
 **/gateway_files
 

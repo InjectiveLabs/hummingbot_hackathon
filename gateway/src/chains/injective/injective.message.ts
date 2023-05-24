@@ -240,6 +240,7 @@ export class MsgBroadcasterLocal {
 
     /** Append Signatures */
     txRaw.signatures = [signature];
+
     /** Broadcast transaction */
     const txResponse = await this.broadcastUsingInjective(
       txRaw,
