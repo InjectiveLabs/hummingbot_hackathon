@@ -1057,7 +1057,7 @@ class InjectiveAPIDataSource(CLOBAPIDataSourceBase):
     async def _check_if_order_failed_based_on_transaction(self, transaction: GetTxByTxHashResponse,
                                                           order: GatewayInFlightOrder) -> bool:
         order_hash = await order.get_exchange_order_id()
-        return order_hash.lower() not in transaction.data.data.decode().lower()
+        return order_hash.lower() not in transaction.data.messages.decode().lower()
 
     @staticmethod
     def _get_backend_price_scaler(market: SpotMarketInfo) -> Decimal:
