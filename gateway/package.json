@@ -1,6 +1,6 @@
 {
   "name": "hummingbot-gateway",
-  "version": "1.15.0",
+  "version": "1.16.0",
   "description": "Middleware that helps Hummingbot clients access standardized DEX API endpoints on different blockchain networks",
   "main": "index.js",
   "license": "Apache-2.0",
@@ -36,7 +36,7 @@
     "@harmony-js/utils": "^0.1.56",
     "@improbable-eng/grpc-web": "^0.13.0",
     "@injectivelabs/networks": "^1.10.8",
-    "@injectivelabs/sdk-ts": "^1.10.58",
+    "@injectivelabs/sdk-ts": "^1.11.0",
     "@injectivelabs/ts-types": "^1.0.29",
     "@injectivelabs/wallet-ts": "^1.10.63",
     "@pancakeswap/sdk": "^2.4.5",
