@@ -1020,8 +1020,7 @@ class InjectivePerpetualAPIDataSource(CLOBPerpAPIDataSourceBase):
     async def _check_if_order_failed_based_on_transaction(
         transaction: GetTxByTxHashResponse, order: GatewayInFlightOrder
     ) -> bool:
-        order_hash = await order.get_exchange_order_id()
-        return order_hash.lower() not in transaction.data.messages.decode().lower()
+        return transaction.s != 'ok'
 
     async def _process_transaction_event(self, transaction: StreamTxsResponse):
         order: GatewayInFlightOrder = self._gateway_order_tracker.get_fillable_order_by_hash(
